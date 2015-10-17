@@ -114,6 +114,8 @@ class Event implements EventInterface
 
             $params = array_replace($params, $response);
         }
+
+        return $params;
     }
 
 }

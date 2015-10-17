@@ -27,7 +27,7 @@ $event->addListener('start_something', 'some-id', function($name) {
 
 #### Trigger/Emit an event
 ```
-$event->emit('start_something', ['Chuck Norris']);
+$response = $event->emit('start_something', ['Chuck Norris']);
 
 // Echoes: Coolest ever: Chuck Norris
 ```
@@ -53,9 +53,9 @@ This will use the same instance as getInstance() returns so you can combine the 
 ```
 Maer\Events\EventFacade::addListener(...);
 
-Maer\Events\EventFacade::emit(...);
-
 Maer\Events\EventFacade::removeListener(...);
+
+$response = Maer\Events\EventFacade::emit(...);
 
 //... and any other method available in the Event class
 
